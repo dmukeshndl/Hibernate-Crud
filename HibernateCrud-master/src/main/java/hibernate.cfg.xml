@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- Loadding the Driver -->
+		<property name = "hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<!-- Making the Connection -->
+		<property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/university</property>
+		<!-- Sql Username -->
+		<property name = "hibernate.connection.username">root</property>
+		<!-- Sql Password -->
+		<property name = "hibernate.connection.password">Root</property>
+		<!-- For MySql Query for Oracle has different -->
+		<property name = "hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- for showing the query -->
+		<property name = "hibernate.show_sql">true</property>
+		<!-- Creating the Table -->
+		<property name = "hibernate.hbm2ddl.auto">create</property>
+		<!-- Mapping the Table -->
+		<mapping class = "com.learn.hibernate.example.HibernateProjectCURD.Student5"></mapping>
+		
+	</session-factory>
+</hibernate-configuration>
